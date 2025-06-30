@@ -26,6 +26,15 @@ class AuthenticatedSessionController extends Controller
     {
         $request->authenticate();
 
+        // Check if user is approved (except for admins)
+        $user = Auth::user();
+        if ($user->role === 'user' && !$user->is_approved) {
+            Auth::logout();
+            return back()->withErrors([
+                'email' => 'Akun Anda belum disetujui oleh admin. Silakan tunggu persetujuan.',
+            ]);
+        }
+
         $request->session()->regenerate();
 
         return redirect()->intended(route('dashboard', absolute: false));

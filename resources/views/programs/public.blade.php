@@ -26,22 +26,9 @@
                                     </div>
                                 </div>
                                 <div class="px-6 pb-6">
-                                    @auth
-                                        <!-- Jika user sudah login, tampilkan tombol daftar -->
-                                        <form action="{{ route('programs.enroll', $program->slug) }}" method="POST">
-                                            @csrf
-                                            <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded transition">
-                                                Daftar Program
-                                            </button>
-                                        </form>
-                                    @else
-                                        <!-- Jika user belum login, tampilkan tombol untuk login -->
-                                        <a href="{{ route('login') }}" class="block">
-                                            <button type="button" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition">
-                                                Login untuk Mendaftar
-                                            </button>
-                                        </a>
-                                    @endauth
+                                    <a href="/{{ $program->slug }}" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition text-center block">
+                                   Detail Program
+                                    </a>
                                 </div>
                             </div>
                         @endforeach

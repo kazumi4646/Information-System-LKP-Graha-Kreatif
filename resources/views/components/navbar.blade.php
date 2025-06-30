@@ -1,4 +1,4 @@
-<nav class="bg-blue-700 shadow-md" x-data="{ isOpen: false }" >
+<nav class="bg-blue-700 shadow-md mb-0" x-data="{ isOpen: false }" >
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="container mx-auto px-4 py-4 flex justify-between items-center">
         <div class="flex items-center">
@@ -8,13 +8,26 @@
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <x-nav-link href="/" :active="request()->is('/')">Dashboard</x-nav-link>
-              <x-nav-link href="/galeri" :active="request()->is('galeri')">Galeri</x-nav-link>
-              <x-nav-link href="/pendaftaran" :active="request()->is('pendaftaran')">Pendaftaran</x-nav-link> 
+              <x-nav-link href="/" :active="request()->is('/')">Dashboard</x-nav-link> 
               @auth
-              <x-nav-link href="/myprograms" :active="request()->is('myprograms')">Program</x-nav-link>
-              @else 
-              <x-nav-link href="/programs" :active="request()->is('programs')">Program</x-nav-link>
+              <x-nav-link href="/myprograms" :active="request()->is('myprograms')">Lihat Program Yang Diikuti</x-nav-link>
+              <x-nav-link href="/profile" :active="request()->is('profile')">Kelola Biodata Peserta</x-nav-link>
+              <form method="POST" action="{{ route('logout') }}" id="logout-form">
+    @csrf
+
+    <x-nav-link href="{{ route('logout') }}"
+        onclick="event.preventDefault(); 
+                 if (confirm('Apakah Anda yakin ingin logout?')) {
+                     document.getElementById('logout-form').submit();
+                 }">
+        {{ __('Log Out') }}
+    </x-nav-link>
+</form>
+
+              @else
+              <x-nav-link href="/register" :active="request()->is('profile')">Registrasi Pendaftaran</x-nav-link>
+              <x-nav-link href="/galeri" :active="request()->is('galeri')">Galeri</x-nav-link>
+              <x-nav-link href="/programs" :active="request()->is('programs')">Daftar Program</x-nav-link>
               @endauth
             </div>
           </div>
@@ -27,36 +40,6 @@
                     <div>
                         @auth
             <div class="relative ml-3">
-              
-              <div>
-                <button type="button" @click="isOpen = !isOpen"
-                class="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                  <span class="absolute -inset-1.5"></span>
-                  <span class="sr-only">Open user menu</span>
-                  <img class="size-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                </button>
-              </div>
-
-              <div  x-show="isOpen"
-              x-transition:enter="transition ease-out duration-100 transform"
-              x-transition:enter-start="opacity-0 scale-95"
-              x-transition:enter-end="opacity-100 scale-100"
-              x-transition:leave="transition ease-in duration-75 transform"
-              x-transition:leave-start="opacity-100 scale-100"
-              x-transition:leave-end="opacity-0 scale-95"
-              class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 ring-1 shadow-lg ring-black/5 focus:outline-hidden" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                <!-- Active: "bg-gray-100 outline-hidden", Not Active: "" -->
-                <a href="/profile" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-
-                    <x-responsive-nav-link :href="route('logout')"
-                            onclick="event.preventDefault();
-                                        this.closest('form').submit();">
-                        {{ __('Log Out') }}
-                    </x-responsive-nav-link>
-                </form>
               </div>
             </div>
           </div>
@@ -111,10 +94,9 @@
           </div>
         </div>
         <div class="mt-3 space-y-1 px-2">
-          <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Your Profile</a>
-          <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Settings</a>
+          <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Kelola Data Pribadi</a>
           <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Sign out</a>
         </div>
       </div>
     </div>
-  </nav> 
+</nav> 

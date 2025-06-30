@@ -11,15 +11,11 @@
     <title>test</title>
 </head>
   <body class="h-full bg-linear-to-t from-sky-100 to-indigo-200">
-  
-    <div class="min-h-full">
 
       <x-navbar></x-navbar>
-
-
       <main>
         {{ $slot }}
       </main>
-    </div>
+
   </body>
 </html>

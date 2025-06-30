@@ -21,10 +21,8 @@
                                         <span class="text-sm text-gray-500">{{ $program->duration_weeks }} weeks</span>
                                     </div>
                                 </div>
-                                <a href="/detail">
-                                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition">
-                                            Detail Program
-                                        </button>
+                                <a href="/{{ $program->slug }}" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition text-center block">
+                                    Detail Program
                                 </a>
                             </div>
                         @endforeach
@@ -54,6 +52,11 @@
                                         <span class="font-bold">Rp {{ number_format($program->price, 0, ',', '.') }}</span>
                                         <span class="text-sm text-gray-500">{{ $program->duration_weeks }} weeks</span>
                                     </div>
+                                </div>
+                                <div class="px-7 pb-7">
+                                    <a href="/{{ $program->slug }}" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition text-center block">
+                                   Detail Program
+                                    </a>
                                 </div>
                             </div>
                         @endforeach

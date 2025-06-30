@@ -9,8 +9,6 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use App\Models\Program;
 
-
-
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
@@ -19,6 +17,12 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role',
+        'tanggal_lahir',
+        'alamat',
+        'pas_foto',
+        'kartu_keluarga',
+        'is_approved',
     ];
 
     protected $hidden = [
@@ -30,11 +34,12 @@ class User extends Authenticatable
     {
         return [
             'email_verified_at' => 'datetime',
+            'tanggal_lahir' => 'date',
             'password' => 'hashed',
         ];
     }
     
-        /**
+    /**
      * The programs that the user is enrolled in.
      */
     public function programs()
@@ -43,5 +48,20 @@ class User extends Authenticatable
                     ->withPivot('enrolled_at')
                     ->withTimestamps();
     }
+
+    /**
+     * Check if user is admin
+     */
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
+    }
+
+    /**
+     * Check if user is regular user
+     */
+    public function isUser()
+    {
+        return $this->role === 'user';
+    }
 }
-    

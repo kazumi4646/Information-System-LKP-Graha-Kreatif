@@ -13,17 +13,13 @@
                     <div class="md:w-1/3 bg-blue-600 text-white p-6 md:h-full flex items-center justify-center">
                         <div class="text-center">
                             <div class="text-5xl font-bold mb-2">01</div>
-                            <h3 class="text-xl font-semibold">Hubungi Kami</h3>
+                            <h3 class="text-xl font-semibold">Register Pada Beranda</h3>
                         </div>
                     </div>
                     <div class="md:w-2/3 p-6">
-                        <p class="text-gray-700">Hubungi tim pendaftaran kami melalui WhatsApp untuk konfirmasi ketersediaan kursi dan jadwal pelatihan. Kami akan membantu Anda dengan informasi lengkap tentang program yang Anda minati.</p>
-                        <a href="https://wa.me/6281224885762" target="_blank" class="inline-flex items-center mt-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
-                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22c-5.523 0-10-4.477-10-10S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
-                            </svg>
-                            Chat via WhatsApp
+                        <p class="text-gray-700">Klik tombol Register Pada Pojok Kanan Atas Halaman Dashboard, Atau Anda Bisa Klik tombol Dibawah Ini Untuk Mendaftar.</p>
+                        <a href="/register" target="_blank" class="inline-flex items-center mt-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
+                            Registrasi Pendaftaran
                         </a>
                     </div>
                 </div>
@@ -32,11 +28,11 @@
                     <div class="md:w-1/3 bg-blue-600 text-white p-6 md:h-full flex items-center justify-center">
                         <div class="text-center">
                             <div class="text-5xl font-bold mb-2">02</div>
-                            <h3 class="text-xl font-semibold">Pilih Program</h3>
+                            <h3 class="text-xl font-semibold">Tunggu Validasi</h3>
                         </div>
                     </div>
                     <div class="md:w-2/3 p-6">
-                       <p class="text-gray-700">Jelajahi berbagai program pelatihan yang kami tawarkan dan pilih yang paling sesuai dengan minat dan kebutuhan Anda. Kunjungi halaman <a href="/program" class="text-blue-600 hover:underline">Program</a> untuk melihat daftar lengkap dan detail kurikulum.</p>
+                       <p class="text-gray-700">Setelah Anda mengisi formulir pendaftaran, tim kami akan memverifikasi data Anda. Mohon tunggu proses validasi maksimal 1×24 jam kerja. Anda akan mendapatkan notifikasi setelah akun Anda divalidasi.</p>
                     </div>
                 </div>
 
@@ -44,15 +40,11 @@
                     <div class="md:w-1/3 bg-blue-600 text-white p-6 md:h-full flex items-center justify-center">
                         <div class="text-center">
                             <div class="text-5xl font-bold mb-2">03</div>
-                            <h3 class="text-xl font-semibold">Isi Formulir</h3>
+                            <h3 class="text-xl font-semibold">Login</h3>
                         </div>
                     </div>
                     <div class="md:w-2/3 p-6">
-                        <p class="text-gray-700">Lengkapi formulir pendaftaran online atau datang langsung ke kantor kami. Siapkan dokumen pendukung seperti Kartu Keluarga, dan pas foto untuk melengkapi proses pendaftaran Anda.</p>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfnzWqE44qoscunhfEEmk6lsOQ6Sd-2k_-yjFxq--souHqtWQ/viewform?usp=header" target="_blank" class="inline-flex items-center mt-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
-                            <img src="{{ asset('img/icon/document.png') }}" alt="Icon" class="w-5 h-5 mr-2 inline">
-                            <span class="text-sm">Formulir Pendaftaran</span>
-                        </a>
+                        <p class="text-gray-700">Setelah akun Anda divalidasi, silakan login menggunakan akun yang telah didaftarkan. Melalui halaman login, Anda dapat mengakses berbagai informasi pelatihan dan status pendaftaran Anda.</p>
 
                     </div>
                 </div>
@@ -61,13 +53,11 @@
                     <div class="md:w-1/3 bg-blue-600 text-white p-6 md:h-full flex items-center justify-center">
                         <div class="text-center">
                             <div class="text-5xl font-bold mb-2">04</div>
-                            <h3 class="text-xl font-semibold">Pembayaran</h3>
+                            <h3 class="text-xl font-semibold">Anda Sudah Berhasil Mendaftar</h3>
                         </div>
                     </div>
                     <div class="md:w-2/3 p-6">
-                        <p class="text-gray-700">biaya pelatihan LKP Graha Kreatif tidak dipungut biaya apapun. 
-                            tetapi, hanya diwajibkan bagi setiap peserta membawa sampah botol plastik minimal 3 kilo gram.
-                             bisa dicicil sampai dengan program pelatihan selesai.</p>
+                        <p class="text-gray-700">Selamat! Anda telah berhasil menyelesaikan proses pendaftaran. Pelatihan di LKP Graha Kreatif tidak dipungut biaya, namun setiap peserta diwajibkan membawa 3 kg sampah botol plastik sebagai bentuk kontribusi terhadap program kebersihan lingkungan.</p>
                     </div>
                 </div>
             </div>
