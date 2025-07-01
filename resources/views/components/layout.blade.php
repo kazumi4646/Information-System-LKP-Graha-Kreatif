@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" style="height: 100%; background-color: #f3f4f6;">
+<html lang="en" class="h-full bg-gray-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/build/assets/css-CVUPaf4i.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> 
+
     <title>LKP GRAHA KREATIF</title>
-    <style>
+
+        <style>
         * {
             margin: 0;
             padding: 0;
@@ -334,153 +339,12 @@
         }
     </style>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <a href="/" class="logo">LKP Graha Kreatif</a>
-                
-                <div class="nav-links">
-                    <a href="/">Dashboard</a>
-                    <a href="/programs">Programs</a>
-                    <a href="/galeri">Gallery</a>
-                    <a href="/register">Register</a>
-                    <a href="/login">Login</a>
-                </div>
-                
-                <button class="mobile-menu-btn">☰</button>
-            </div>
-        </div>
-    </nav>
+  <body class="h-full bg-linear-to-t from-sky-100 to-indigo-200">
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Unlock Your Potential with Professional IT Training</h1>
-                    <p>Master programming skills and Microsoft Excel with LKP Graha Kreatif's expert-led courses designed for success in today's digital world.</p>
-                    <div class="hero-buttons">
-                        <a href="#courses" class="btn btn-primary">Explore Courses</a>
-                        <a href="https://wa.me/6281224885762" class="btn btn-outline">Contact Us</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Students learning programming">
-                </div>
-            </div>
-        </div>
-    </section>
+      <x-navbar></x-navbar>
+      <main>
+        {{ $slot }}
+      </main>
 
-    <!-- Welcome Section -->
-    <section class="welcome">
-        <div class="container">
-            <div class="section-header">
-                <h2>Welcome to LKP Graha Kreatif</h2>
-                <p>Your gateway to mastering programming and data analysis skills. Join us to enhance your career prospects and become a tech leader.</p>
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>Comprehensive Curriculum</h3>
-                    <p>Our courses cover a wide range of topics, from web development to data analysis, ensuring you gain the skills needed for today's job market.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <h3>Expert Instructors</h3>
-                    <p>Learn from industry professionals with years of experience who are dedicated to helping you succeed in your career.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <h3>Flexible Learning Options</h3>
-                    <p>Choose from online or in-person classes that fit your schedule, allowing you to learn at your own pace.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Courses Section -->
-    <section id="courses" class="courses">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Featured Courses</h2>
-                <p>Comprehensive training programs designed to build your skills from the ground up</p>
-            </div>
-            
-            <div class="courses-grid">
-                <!-- Course 1: Web Development -->
-                <div class="course-card">
-                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Web Development Course" class="course-image">
-                    <div class="course-content">
-                        <span class="course-category">Programming</span>
-                        <h3 class="course-title">Web Development Fundamentals</h3>
-                        <p class="course-description">Learn HTML, CSS, JavaScript and PHP to build modern, responsive websites from scratch.</p>
-                        <div class="course-meta">
-                            <span class="course-price">FREE</span>
-                            <span class="course-duration">12 weeks</span>
-                        </div>
-                        <a href="#" class="btn btn-primary">Learn More</a>
-                    </div>
-                </div>
-                
-                <!-- Course 2: Excel -->
-                <div class="course-card">
-                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Excel Course" class="course-image">
-                    <div class="course-content">
-                        <span class="course-category">Microsoft Office</span>
-                        <h3 class="course-title">Advanced Excel for Professionals</h3>
-                        <p class="course-description">Master complex formulas, pivot tables, macros, and data analysis tools in Microsoft Excel.</p>
-                        <div class="course-meta">
-                            <span class="course-price">FREE</span>
-                            <span class="course-duration">8 weeks</span>
-                        </div>
-                        <a href="#" class="btn btn-primary">Learn More</a>
-                    </div>
-                </div>
-                
-                <!-- Course 3: Laravel -->
-                <div class="course-card">
-                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Laravel Course" class="course-image">
-                    <div class="course-content">
-                        <span class="course-category">Framework</span>
-                        <h3 class="course-title">Laravel Application Development</h3>
-                        <p class="course-description">Build robust web applications using Laravel, the popular PHP framework with MVC architecture.</p>
-                        <div class="course-meta">
-                            <span class="course-price">FREE</span>
-                            <span class="course-duration">16 weeks</span>
-                        </div>
-                        <a href="#" class="btn btn-primary">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="view-all">
-                <a href="/programs" class="btn btn-outline-blue">View All Courses</a>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-        
-        // Mobile menu functionality (basic implementation)
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-            // You can implement mobile menu toggle here
-            alert('Mobile menu - implement as needed');
-        });
-    </script>
-</body>
+  </body>
 </html>
